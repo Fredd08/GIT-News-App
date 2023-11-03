@@ -19,7 +19,15 @@ class _SplashscreenState extends State<Splashscreen> {
             decoration: BoxDecoration(boxShadow:[] ),
             height: h * 0.45,
             width: double.infinity,
-            child: Image.asset("assets/5G.PNG"),
+            child: Stack(
+              children: [
+                Image.asset("assets/5G.PNG"),
+                Positioned(
+                  right: 20,
+                  top: 50,
+                  child: Text("Skip",style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),))
+              ],
+            )
           ),
           Container(
               height: h * 0.5,
@@ -47,9 +55,25 @@ class _SplashscreenState extends State<Splashscreen> {
                     left:10,
                     
                       child: Text(
-                    "Created",
-                    style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
-                  ))
+                    "Created with curated content on",
+                    style: TextStyle(fontSize: 19, color: Colors.black54),
+                  )),
+                  Positioned(
+                    top: 15,
+                    left:10,
+                    
+                      child: Text(
+                    "thousands of topics from",
+                    style: TextStyle(fontSize: 19, color: Colors.black54),
+                  )),
+                   Positioned(
+                    top: 15,
+                    left:10,
+                    
+                      child: Text(
+                    "world-renowed podcasts, local outlets",
+                    style: TextStyle(fontSize: 19, color: Colors.black54),
+                  )),
                 ],
               )),
         ],
