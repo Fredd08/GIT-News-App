@@ -16,9 +16,10 @@ class _SplashscreenState extends State<Splashscreen> {
       body: Column(
         children: [
           Container(
-            height: h * 0.4,
+            decoration: BoxDecoration(boxShadow:[] ),
+            height: h * 0.45,
             width: double.infinity,
-            child: Image.asset("assets/5G.jpg"),
+            child: Image.asset("assets/5G.PNG"),
           ),
           Container(
               height: h * 0.5,
@@ -27,10 +28,26 @@ class _SplashscreenState extends State<Splashscreen> {
                 children: [
                   Positioned(
                     top: 15,
-                    left:10,
+                    left:20,
                     
                       child: Text(
                     "Explore and follow topics",
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  )),
+                  Positioned(
+                    top: 40,
+                    left:20,
+                    
+                      child: Text(
+                    "relevant to you",
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  )),
+                  Positioned(
+                    top: 15,
+                    left:10,
+                    
+                      child: Text(
+                    "Created",
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                   ))
                 ],
