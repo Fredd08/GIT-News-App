@@ -61,29 +61,30 @@ class _SplashscreenState extends State<Splashscreen> {
                     style: TextStyle(fontSize: 19, color: Colors.black54,fontWeight: FontWeight.bold),
                   )),
                   Positioned(
-                    top: 15,
-                    left:10,
+                    top: 143,
+                    left:26,
                     
                       child: Text(
                     "thousands of topics from",
-                    style: TextStyle(fontSize: 19, color: Colors.black54),
+                    style: TextStyle(fontSize: 19, color: Colors.black54,fontWeight: FontWeight.bold),
                   )),
                    Positioned(
-                    top: 15,
-                    left:10,
+                    top: 166,
+                    left:26,
                     
                       child: Text(
                     "world-renowed podcasts, local outlets",
-                    style: TextStyle(fontSize: 19, color: Colors.black54),
+                    style: TextStyle(fontSize: 19, color: Colors.black54,fontWeight: FontWeight.bold),
                   )),
                   Positioned(
-                    top: 15,
-                    left:10,
+                    top: 189,
+                    left:26,
                     
                       child: Text(
                     "and the community",
-                    style: TextStyle(fontSize: 19, color: Colors.black54),
+                    style: TextStyle(fontSize: 19, color: Colors.black54,fontWeight: FontWeight.bold),
                   )),
+                  Positioned(child: Container(child: Text("Login"),))
                 ],
               )),
         ],
