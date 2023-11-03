@@ -127,7 +127,7 @@ class _SplashscreenState extends State<Splashscreen> {
                         
                         child: Center(
                           child: Text(
-                            "Login",
+                            "Get Started",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
