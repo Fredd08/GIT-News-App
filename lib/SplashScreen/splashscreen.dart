@@ -9,8 +9,20 @@ class Splashscreen extends StatefulWidget {
 class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
+    var h=MediaQuery.of(context).size.height;
+    var w=MediaQuery.of(context).size.width;
     return Scaffold(
-      
+      body: Column(
+        children: [
+          Container(
+
+            height: h*0.4,
+            width: double.infinity,
+            child: Image.asset("assets/5G.jpg"),
+
+          )
+        ],
+      ),
     );
   }
 }
