@@ -17,6 +17,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: Colors.black54,
       body: Column(
+
         children: [
           SizedBox(
             height: h * 0.25,
@@ -73,11 +74,15 @@ class _LoginState extends State<Login> {
             ),
           ),
           SizedBox(
-            height: h*0.08,
+            height: h*0.02,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right:20.0),
-            child: Text("Forgot Password?"),
+          Row(
+            children: [
+              SizedBox(
+                width: w*0.54,
+              ),
+              Text("Forgot Password?",style: TextStyle(color:Colors.white),textAlign: TextAlign.right,),
+            ],
           )
         ],
       ),
