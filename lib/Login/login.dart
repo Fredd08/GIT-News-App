@@ -72,6 +72,13 @@ class _LoginState extends State<Login> {
               keyboardType: TextInputType.emailAddress,
             ),
           ),
+          SizedBox(
+            height: h*0.08,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right:20.0),
+            child: Text("Forgot Password?"),
+          )
         ],
       ),
     );
