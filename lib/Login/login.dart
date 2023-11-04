@@ -8,6 +8,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool pas=false;
+
   @override
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
@@ -43,9 +45,10 @@ class _LoginState extends State<Login> {
               InputDecoration(
                 hintText: "Username",
                 hintStyle: TextStyle(color:Colors.white),
-                border: OutlineInputBorder(borderSide: BorderSide.none)
+                border: OutlineInputBorder(borderSide: BorderSide.none),
                 
               ),
+              keyboardType: TextInputType.emailAddress,
             ),
           ),
           SizedBox(
@@ -58,6 +61,7 @@ class _LoginState extends State<Login> {
             height: 60,
             width: w*0.7,
             child: TextFormField(
+              obscureText: pas,
               decoration: 
               InputDecoration(
                 hintText: "Password",
@@ -65,6 +69,7 @@ class _LoginState extends State<Login> {
                 border: OutlineInputBorder(borderSide: BorderSide.none)
                 
               ),
+              keyboardType: TextInputType.emailAddress,
             ),
           ),
         ],
