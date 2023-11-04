@@ -36,7 +36,7 @@ class _LoginState extends State<Login> {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.white)
             ),
-            height: 70,
+            height: 60,
             width: w*0.7,
             child: TextFormField(
               decoration: 
@@ -47,7 +47,26 @@ class _LoginState extends State<Login> {
                 
               ),
             ),
-          )
+          ),
+          SizedBox(
+            height: h*0.03,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white)
+            ),
+            height: 60,
+            width: w*0.7,
+            child: TextFormField(
+              decoration: 
+              InputDecoration(
+                hintText: "Password",
+                hintStyle: TextStyle(color:Colors.white),
+                border: OutlineInputBorder(borderSide: BorderSide.none)
+                
+              ),
+            ),
+          ),
         ],
       ),
     );
