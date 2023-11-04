@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Login/login.dart';
+
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
@@ -102,18 +104,25 @@ class _SplashscreenState extends State<Splashscreen> {
                   Positioned(
                       top: 280,
                       left: 20,
-                      child: Container(
-                        decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20)),
-                       height: 60,
-                       width: 130,
-                        
-                        child: Center(
-                          child: Text(
-                            "Login",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18),
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => Login())));
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(20)),
+                         height: 60,
+                         width: 130,
+                          
+                          child: Center(
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
                           ),
                         ),
                       )),

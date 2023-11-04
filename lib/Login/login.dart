@@ -13,6 +13,7 @@ class _LoginState extends State<Login> {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Column(
         children: [
           SizedBox(
