@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           SizedBox(
-            height: h*0.08,
+            height: h*0.04,
           ),
           Container(
             decoration: BoxDecoration(
@@ -83,6 +83,16 @@ class _LoginState extends State<Login> {
               ),
               Text("Forgot Password?",style: TextStyle(color:Colors.white),textAlign: TextAlign.right,),
             ],
+          ),
+          SizedBox(
+            height: h*0.04,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white),color: Colors.white,borderRadius: BorderRadius.circular(15)
+            ),
+            height: 65,
+            width: w*0.7,
           )
         ],
       ),

@@ -31,12 +31,19 @@ class _SplashscreenState extends State<Splashscreen> {
                   Positioned(
                       right: 20,
                       top: 50,
-                      child: Text(
-                        "Skip",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold),
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => Login())));
+                          });
+                        },
+                        child: Text(
+                          "Skip",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ))
                 ],
               )),
