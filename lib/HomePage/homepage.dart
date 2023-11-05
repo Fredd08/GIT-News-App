@@ -25,21 +25,29 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(20.0),
             child: Text("Explore today's\nworld News",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.grey,
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(113, 158, 158, 158),borderRadius: BorderRadius.circular(12)
+              ),
+              height: 45,
+              width: w*0.9,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left:12.0),
+                    child: Icon(Icons.search_outlined,color: Colors.grey,size: 25,),
+                  ),
+                  SizedBox(
+                    width: w*0.01,
+                  ),
+                  Text("Search here",style: TextStyle(color: Colors.grey,fontSize: 18),)
+          
+                ],
+              ),
             ),
-            child: Row(
-              children: [
-                Icon(Icons.search_outlined,color: Colors.grey,),
-                SizedBox(
-                  width: w*0.01,
-                ),
-                Text("Search",style: TextStyle(color: Colors.grey,fontSize: 18),)
-
-              ],
-            )
-          )
+          ),
+          
         ],
       ),
     );
