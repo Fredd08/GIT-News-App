@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/SignUp/signup.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -143,7 +144,13 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Not a member? ",style: TextStyle(fontSize: 17,color: Colors.white),),
-                    Text("SignUp",style: TextStyle(fontSize: 16,color: Colors.yellow),),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignUp()));
+                        });
+                      },
+                      child: Text("SignUp",style: TextStyle(fontSize: 16,color: Colors.yellow),)),
                   ],
                 )
 
