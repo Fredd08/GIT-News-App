@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/HomePage/homepage.dart';
 import 'package:newsapp/SignUp/signup.dart';
 
 class Login extends StatefulWidget {
@@ -95,13 +96,18 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: h*0.03,
             ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white),color: Colors.white,borderRadius: BorderRadius.circular(15)
+            GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white),color: Colors.white,borderRadius: BorderRadius.circular(15)
+                ),
+                height: 65,
+                width: w*0.7,
+                child: Center(child: Text("Sign In",style: TextStyle(color: Colors.black,fontSize: 22),)),
               ),
-              height: 65,
-              width: w*0.7,
-              child: Center(child: Text("Sign In",style: TextStyle(color: Colors.black,fontSize: 22),)),
             ),
             SizedBox(
               height: h*0.03,
