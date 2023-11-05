@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/specs/pictures.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -51,7 +52,11 @@ class _HomePageState extends State<HomePage> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Image.asset("assets/1.jpg")
+                for(int i=0;i<picture.length;i++)
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset("${picture.elementAt(i)["1"]}"),
+                )
               ],
             ),
           )
