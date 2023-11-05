@@ -53,12 +53,34 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 for(int i=0;i<picture.length;i++)
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.asset("${picture.elementAt(i)["1"]}"),
-                )
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                    child: Container(
+                      height: 250,
+                      width: 220,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset("${picture.elementAt(i)["1"]}",height: 250,fit: BoxFit.cover,),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left:12.0),
+                child: Text("Latest News",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+              ),
+              SizedBox(
+                width: w*0.56,
+              ),
+              Text("More",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),)
+            ],
           )
         ],
       ),
