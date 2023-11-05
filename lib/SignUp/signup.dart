@@ -147,6 +147,11 @@ class _SignUpState extends State<SignUp> {
                       border: OutlineInputBorder(borderSide: BorderSide.none)),
                   controller: _passController,
                   keyboardType: TextInputType.emailAddress,
+                  validator: (value){
+                    if(value!.isEmpty){
+                      return("Field required");
+                    }else if(value!=_conpController.text){return("Password doesn't match");}else{return null;}
+                  },
                 ),
               ),
               SizedBox(
@@ -167,6 +172,11 @@ class _SignUpState extends State<SignUp> {
                       border: OutlineInputBorder(borderSide: BorderSide.none)),
                   controller: _conpController,
                   keyboardType: TextInputType.emailAddress,
+                  validator: (value){
+                    if(value!.isEmpty){
+                      return("Field required");
+                    }else if(value!=_passController.text){return("Password doesn't match");}else{return null;}
+                  },
                 ),
               ),
               SizedBox(
