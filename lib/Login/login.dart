@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             SizedBox(
-              height: h*0.03,
+              height: h*0.02,
             ),
             Container(
               decoration: BoxDecoration(

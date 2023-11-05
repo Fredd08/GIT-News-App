@@ -43,12 +43,12 @@ class _SignUpState extends State<SignUp> {
                 border: Border.all(color: Colors.white)
               ),
               height: 55,
-              width: w*0.7,
+              width: w*0.8,
               child: TextFormField(
                 style: TextStyle(color: Colors.white),
                 decoration: 
                 InputDecoration(
-                  hintText: "Username",
+                  hintText: "Full Name",
                   hintStyle: TextStyle(color:Colors.white),
                   border: OutlineInputBorder(borderSide: BorderSide.none),
                   
@@ -57,14 +57,57 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             SizedBox(
-              height: h*0.03,
+              height: h*0.02,
             ),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.white)
               ),
               height: 55,
-              width: w*0.7,
+              width: w*0.8,
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                decoration: 
+                InputDecoration(
+                  hintText: "Email",
+                  hintStyle: TextStyle(color:Colors.white),
+                  border: OutlineInputBorder(borderSide: BorderSide.none),
+                  
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+            ),
+            SizedBox(
+              height: h*0.02,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white)
+              ),
+              height: 55,
+              width: w*0.8,
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                decoration: 
+                InputDecoration(
+                  hintText: "Phone Number",
+                  hintStyle: TextStyle(color:Colors.white),
+                  border: OutlineInputBorder(borderSide: BorderSide.none),
+                  
+                ),
+                keyboardType: TextInputType.phone,
+              ),
+            ),
+            
+            SizedBox(
+              height: h*0.02,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white)
+              ),
+              height: 55,
+              width: w*0.8,
               child: TextFormField(
                 style: TextStyle(color: Colors.white),
                 obscureText: pas2,
@@ -72,6 +115,29 @@ class _SignUpState extends State<SignUp> {
                 decoration: 
                 InputDecoration(
                   hintText: "Password",
+                  hintStyle: TextStyle(color:Colors.white),
+                  border: OutlineInputBorder(borderSide: BorderSide.none)
+                  
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+            ),
+            SizedBox(
+              height: h*0.02,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white)
+              ),
+              height: 55,
+              width: w*0.80,
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                obscureText: pas2,
+                onTap: passe2,
+                decoration: 
+                InputDecoration(
+                  hintText: "Confirm Password",
                   hintStyle: TextStyle(color:Colors.white),
                   border: OutlineInputBorder(borderSide: BorderSide.none)
                   
