@@ -92,7 +92,7 @@ class _LoginState extends State<Login> {
               ],
             ),
             SizedBox(
-              height: h*0.04,
+              height: h*0.03,
             ),
             Container(
               decoration: BoxDecoration(
@@ -103,32 +103,49 @@ class _LoginState extends State<Login> {
               child: Center(child: Text("Sign In",style: TextStyle(color: Colors.black,fontSize: 22),)),
             ),
             SizedBox(
-              height: h*0.04,
+              height: h*0.03,
             ),
             Text("OR",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),),
+            SizedBox(
+              height: h*0.03,
+            ),
+            
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Card(
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    child: Image.asset("assets/apple.png",height: 50,),
+                  ),
+                ),
+                SizedBox(
+                  width: w*0.04,
+                ),
+                Card(
+                  child: Container(
+                    
+                    height: 50,
+                    width: 50,
+                    child: Image.asset("assets/google.png",height: 50,),
+                  ),
+                ),
+                
+              ],
+            ),
             SizedBox(
               height: h*0.04,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  child: Image.asset("assets/apple.jpg",height: 30,),
-                ),
-                SizedBox(
-                  width: w*0.06,
-                ),
-                Container(
-                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/google.jpg"))),
-                  height: 50,
-                  width: 50,
-                  child: Image.asset("assets/google.jpg",height: 30,),
-                ),
-              ],
-            )
+                  children: [
+                    Text("Not a member? ",style: TextStyle(fontSize: 17,color: Colors.white),),
+                    Text("SignUp",style: TextStyle(fontSize: 16,color: Colors.yellow),),
+                  ],
+                )
 
           ],
         ),
