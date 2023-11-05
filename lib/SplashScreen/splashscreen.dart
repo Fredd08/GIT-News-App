@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/SignUp/signup.dart';
 
 import '../Login/login.dart';
 
@@ -142,12 +143,19 @@ class _SplashscreenState extends State<Splashscreen> {
                        width: 130,
                         
                         child: Center(
-                          child: Text(
-                            "Get Started",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18),
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignUp()));
+                              });
+                            },
+                            child: Text(
+                              "Get Started",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
                           ),
                         ),
                       ))

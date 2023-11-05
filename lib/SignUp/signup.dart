@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/Login/login.dart';
 
+import '../HomePage/homepage.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
@@ -20,6 +22,13 @@ class _SignUpState extends State<SignUp> {
   void passe2() {
     pas2 = !pas2;
   }
+  bool navi=false;
+ void navigate1(navi) async{
+  if(navi==true){
+    await Future.delayed(Duration(seconds:3));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(),));
+  }return null;
+ }
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +98,11 @@ class _SignUpState extends State<SignUp> {
                   ),
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
+                  validator: (value){
+                    if(value!.isEmpty){
+                      return("Field required");
+                    }else{return null;}
+                  },
                 ),
               ),
               SizedBox(
@@ -108,6 +122,11 @@ class _SignUpState extends State<SignUp> {
                   ),
                   controller: _phoneController,
                   keyboardType: TextInputType.phone,
+                  validator: (value){
+                    if(value!.isEmpty){
+                      return("Field required");
+                    }else{return null;}
+                  },
                 ),
               ),
               SizedBox(
@@ -154,6 +173,11 @@ class _SignUpState extends State<SignUp> {
                 height: h * 0.04,
               ),
               GestureDetector(
+                onTap: (){
+                  if( _formkey.currentState!.validate())
+                         { var value=_formkey.currentState!.validate();
+                          navigate1(true);}else{return null;}
+                },
                 child: Container(
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
