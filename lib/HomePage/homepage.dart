@@ -47,7 +47,14 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Image.asset("assets/1.jpg")
+              ],
+            ),
+          )
         ],
       ),
     );
