@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
       
           children: [
             SizedBox(
-              height: h * 0.25,
+              height: h * 0.20,
             ),
             Center(
               child: Text(
@@ -102,6 +102,34 @@ class _LoginState extends State<Login> {
               width: w*0.7,
               child: Center(child: Text("Sign In",style: TextStyle(color: Colors.black,fontSize: 22),)),
             ),
+            SizedBox(
+              height: h*0.04,
+            ),
+            Text("OR",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),),
+            SizedBox(
+              height: h*0.04,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 50,
+                  width: 50,
+                  child: Image.asset("assets/apple.jpg",height: 30,),
+                ),
+                SizedBox(
+                  width: w*0.06,
+                ),
+                Container(
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/google.jpg"))),
+                  height: 50,
+                  width: 50,
+                  child: Image.asset("assets/google.jpg",height: 30,),
+                ),
+              ],
+            )
+
           ],
         ),
       ),
