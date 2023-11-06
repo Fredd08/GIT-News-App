@@ -20,16 +20,9 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (context) => Login()));
-          },
-          child: Icon(
-            Icons.keyboard_arrow_left_outlined,
-            color: Colors.black,
-          ),
-        ),
+        iconTheme: IconThemeData(color: Colors.black),
+        automaticallyImplyLeading: false,
+        
         
         backgroundColor: Colors.white70,
       ),
@@ -103,6 +96,12 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           height: 250,
                           width: 220,
+                          decoration: BoxDecoration(boxShadow: [BoxShadow(
+                            blurRadius: 6,
+                            color: Colors.grey,
+                            offset: Offset(6, 6),
+                            blurStyle: BlurStyle.inner
+                          )],borderRadius: BorderRadius.circular(16)),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16),
                             child: Image.asset(
