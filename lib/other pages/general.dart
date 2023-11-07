@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:newsapp/other%20pages/sec.dart';
 
@@ -17,15 +19,21 @@ class _GeneralState extends State<General> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              child: Stack(
-                children: [
-                  Center(
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20))),
+            Stack(
+              children: [
+                Center(
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20))),
+                child: GestureDetector(
+                  onTap: () {
+                     Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => SEC()));
+                  },
                   child: Container(
                     height: h * 0.8,
                     width: w * 0.92,
@@ -39,52 +47,50 @@ class _GeneralState extends State<General> {
                             width: w * 0.92,
                             fit: BoxFit.cover,
                           ),
-                        ),),),),
-                        Positioned(
-                            top: h * 0.7,
-                            child: Center(
-                              child: Card(
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(20),
-                                          topRight: Radius.circular(20))),
-                                  child: Container(
-                                      width: w * 0.98,
-                                      height: 80,
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.pushReplacement(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) => SEC()));
-                                        },
-                                        child: Column(
-                                          children: [Text(
-                                            "Coinbase warned by SEC of potencial \nsecurities charges-CNBC",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 18),
-                                          ),
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            crossAxisAlignment: CrossAxisAlignment.end,
-                                            children: [
-                                             Icon(Icons.share,color: Colors.black,),
-                                             Icon(Icons.bookmark,color: Colors.black,),
-                                             Icon(Icons.favorite_outline,color: Colors.red,),
+                        ),),
+                ),),),
+                      Positioned(
+                          top: h * 0.7,
+                          child: Center(
+                            child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(20),
+                                        topRight: Radius.circular(20))),
+                                child: Container(
+                                    width: w * 0.98,
+                                    height: 80,
+                                    child: Column(
+                                      children: [Text(
+                                        "Coinbase warned by SEC of potencial \nsecurities charges-CNBC",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18),
+                                      ),
+                                      Row(
+                                       mainAxisAlignment: MainAxisAlignment.end,
+                                        children: [
+                                         Padding(
+                                           padding: const EdgeInsets.only(right:15.0),
+                                           child: Icon(Icons.share,color: Colors.black,),
+                                         ),
+                                         
+                                         Icon(Icons.bookmark,color: Colors.black,),
+                                         Padding(
+                                           padding: const EdgeInsets.only(left:15.0,right:15),
+                                           child: Icon(Icons.favorite_outline,color: Colors.red,),
+                                         ),
 
-                                            ],
-                                          )
-                                          ]
-                                        ),
-                                      ))),
-                            ))
-                    
+                                        ],
+                                      )
+                                      ]
+                                    ))),
+                          ))
                   
                 
               
-                ],
-              )
+            
+              ],
             )
           ],
         ),
