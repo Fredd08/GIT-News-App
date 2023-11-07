@@ -128,9 +128,14 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: w * 0.56,
                 ),
-                Text(
-                  "More",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                GestureDetector(
+                  onTap:() {
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => news247())));
+                  },
+                  child: Text(
+                    "More",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                  ),
                 )
               ],
             ),
