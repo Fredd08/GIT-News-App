@@ -21,14 +21,7 @@ class _SECState extends State<SEC> {
         height: 900,
         child: Stack(
           children: [
-            Positioned(
-              top: 20,
-              child: GestureDetector(
-                      onTap: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>news247()));
-                      },
-                      child: Icon(Icons.keyboard_arrow_left_outlined,color: Colors.black,)),
-            ),
+            
             Positioned(
               top: 1,
               child: Image.asset("assets/coinbase.jpeg",height: 330,fit:BoxFit.cover,)),

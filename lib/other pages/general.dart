@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:newsapp/other%20pages/sec.dart';
+import 'package:share_plus/share_plus.dart';
 
 class General extends StatefulWidget {
   const General({super.key});
@@ -50,7 +51,7 @@ class _GeneralState extends State<General> {
                         ),),
                 ),),),
                       Positioned(
-                          top: h * 0.7,
+                          top: h * 0.67,
                           child: Center(
                             child: Card(
                                 shape: RoundedRectangleBorder(
@@ -59,7 +60,7 @@ class _GeneralState extends State<General> {
                                         topRight: Radius.circular(20))),
                                 child: Container(
                                     width: w * 0.98,
-                                    height: 80,
+                                    height: 103,
                                     child: Column(
                                       children: [Text(
                                         "Coinbase warned by SEC of potencial \nsecurities charges-CNBC",
@@ -72,7 +73,9 @@ class _GeneralState extends State<General> {
                                         children: [
                                          Padding(
                                            padding: const EdgeInsets.only(right:15.0),
-                                           child: Icon(Icons.share,color: Colors.black,),
+                                           child: IconButton(onPressed: (){
+                                            _shareApp();
+                                           }, icon: Icon(Icons.share,color: Colors.black,))
                                          ),
                                          
                                          Icon(Icons.bookmark,color: Colors.black,),
@@ -96,5 +99,12 @@ class _GeneralState extends State<General> {
         ),
       ),
     );
+
   }
 }
+ void _shareApp(){
+    String message="Share";
+
+    Share.share(message);
+
+  }
