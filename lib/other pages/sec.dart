@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:newsapp/other%20pages/247.dart';
+import 'package:text_to_speech/text_to_speech.dart';
 
 class SEC extends StatefulWidget {
   const SEC({super.key});
@@ -11,6 +13,27 @@ class SEC extends StatefulWidget {
 }
 
 class _SECState extends State<SEC> {
+  String a="Coinbase warned by SEC\nof potential securities\ncharges - CNBC";
+  bool isvolume=false;
+  void Volume(){
+    isvolume=!isvolume;
+  }
+  TextToSpeech tts = TextToSpeech();
+  FlutterTts flutterTts= FlutterTts();
+  void texttoSpeech (String text) async{
+    await tts.setLanguage("en-Us");
+    await tts.setVolume(0.5);
+    await tts.setRate(0.5);
+    await tts.setPitch(1);
+    await tts.speak(text);
+  }
+  // void textToSpeech(String text) async{
+  //   await flutterTts.setLanguage("en-Us");
+  //   await flutterTts.setVolume(0.5);
+  //   await flutterTts.setSpeechRate(0.5);
+  //   await flutterTts.setPitch(1);
+  //   await flutterTts.speak(text);
+  // }
   @override
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
@@ -24,7 +47,27 @@ class _SECState extends State<SEC> {
             
             Positioned(
               top: 1,
-              child: Image.asset("assets/coinbase.jpeg",height: 330,fit:BoxFit.cover,)),
+              child: Container(
+                height: 330,
+                child: Stack(
+                
+                children: [
+                  Positioned(child: Image.asset("assets/coinbase.jpeg",height: 330,fit:BoxFit.cover,)),
+                  Positioned(
+                    top:35,
+                    left:10,
+                    child:GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>news247()));
+                      },
+                      child: Icon(Icons.keyboard_arrow_left_outlined,color: Colors.white,))),
+                      Positioned(child: IconButton(onPressed: (){
+                        texttoSpeech(a);
+                        Volume();
+                      }, icon: Icon(isvolume ? Icons.volume_up : Icons.volume_down)))
+
+                ],
+              ))),
         Positioned(
           top: h*0.4,
           left: 1,
@@ -46,7 +89,7 @@ class _SECState extends State<SEC> {
                     Positioned(
                       left: 10,
                       child: Text(
-                        "Coinbase warned by SEC\nof potential securities\ncharges - CNBC",
+                        a,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 25),
                       ),
